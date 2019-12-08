@@ -1,4 +1,4 @@
-package duoXianCheng.util;
+package duoXianCheng.util.CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -35,18 +35,15 @@ public class CountDownLatchDemo {
 //        countDownLatch.await();
 //        System.out.println("主线程执行完毕");
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("业务线程执行中");
-                System.out.println("业务线程开始等待其他线程执行完毕");
-                try {
-                    countDownLatch.await();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("业务线程执行完毕");
+        new Thread(() -> {
+            System.out.println("业务线程执行中");
+            System.out.println("业务线程开始等待其他线程执行完毕");
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            System.out.println("业务线程执行完毕");
         }).start();
 
     }
