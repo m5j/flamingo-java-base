@@ -3,8 +3,8 @@ package duoXianCheng.util.CountDownLatch;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * 闭锁
- * 用于A线程等待其他线程执行完成之后，A才开始继续执行
+ * CountDownLatch直接翻译为【倒计时锁】，业内一般称为【闭锁】
+ * 用于A线程等待其他线程执行完成之后，A才开始继续执行的场景
  */
 public class CountDownLatchDemo {
 
