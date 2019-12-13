@@ -2,7 +2,7 @@ package duoXianCheng.base;
 
 /**
  * 开启线程的第2种方式
- * 1-实现Runnable接口 2-实现run方法 3-寄生于Thread中，利用Thread的start方法启动线程
+ * 笔记.md-实现Runnable接口 2-实现run方法 3-寄生于Thread中，利用Thread的start方法启动线程
  */
 public class RunnableDemo {
 

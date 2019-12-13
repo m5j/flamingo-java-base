@@ -11,26 +11,30 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>
  * 公平锁：先获取，先满足。反之，就是非公平锁（可以插队）
  */
-public class LockDemo {
+public class TryLockDemo {
     private Lock lock = new ReentrantLock();  //保证是同一把锁（同一个对象）
 
     public static void main(String[] args) {
-        LockDemo lockDemo = new LockDemo();
+        TryLockDemo lockDemo = new TryLockDemo();
         new Thread(() -> lockDemo.insert(Thread.currentThread())).start();
         new Thread(() -> lockDemo.insert(Thread.currentThread())).start();
     }
 
 
     private void insert(Thread thread) {
-        lock.lock();
-        try {
-            System.out.println(thread.getName() + "得到了锁");
-            Thread.sleep(3000);
-        } catch (Exception ignored) {
+        if (lock.tryLock()) { //如果没有获取到锁，则返回false，并且不会再次获取锁了
+            try {
+                System.out.println(thread.getName() + "得到了锁");
+                Thread.sleep(3000);
+            } catch (Exception ignored) {
 
-        } finally {
-            System.out.println(thread.getName() + "释放了锁");
-            lock.unlock(); //注意一定要放在finally块中
+            } finally {
+                System.out.println(thread.getName() + "释放了锁");
+                lock.unlock(); //注意一定要放在finally块中
+            }
         }
+//        lock.lock();
+
+
     }
 }

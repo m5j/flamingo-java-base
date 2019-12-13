@@ -2,7 +2,7 @@ package duoXianCheng.base;
 
 /**
  * 开启线程第1种方式
- * 1-继承Thread类 2-重写run方法 3-start方法开启线程
+ * 笔记.md-继承Thread类 2-重写run方法 3-start方法开启线程
  */
 public class ThreadDemo {
 
