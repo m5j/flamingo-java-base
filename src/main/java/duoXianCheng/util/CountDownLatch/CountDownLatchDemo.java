@@ -30,21 +30,21 @@ public class CountDownLatchDemo {
         for (int i = 0; i < SIZE; i++) {
             new MyThread().start();
         }
-//
-//        System.out.println("主线程等待中...");
-//        countDownLatch.await();
-//        System.out.println("主线程执行完毕");
 
-        new Thread(() -> {
-            System.out.println("业务线程执行中");
-            System.out.println("业务线程开始等待其他线程执行完毕");
-            try {
-                countDownLatch.await();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("业务线程执行完毕");
-        }).start();
+        System.out.println("主线程等待中...");
+        countDownLatch.await();
+        System.out.println("主线程执行完毕");
+
+//        new Thread(() -> {
+//            System.out.println("业务线程执行中");
+//            System.out.println("业务线程开始等待其他线程执行完毕");
+//            try {
+//                countDownLatch.await();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("业务线程执行完毕");
+//        }).start();
 
     }
 
