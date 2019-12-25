@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * AtomicInteger使用示例
+ * Integer类型原子类
  * Created by MIN.WU.JUN on 2019/12/10
  */
 public class AtomicIntegerDemo {
