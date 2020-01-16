@@ -47,12 +47,12 @@ public class ReadWriteLockDemo {
         new Thread(() -> test.read(Thread.currentThread())).start();
         new Thread(() -> test.read(Thread.currentThread())).start();
 
-        //读与写：结果是同步执行
-        new Thread(() -> test.read(Thread.currentThread())).start();
-        new Thread(() -> test.write(Thread.currentThread())).start();
-
-        //写与写：结果是同步执行
-        new Thread(() -> test.write(Thread.currentThread())).start();
-        new Thread(() -> test.write(Thread.currentThread())).start();
+//        //读与写：结果是同步执行
+//        new Thread(() -> test.read(Thread.currentThread())).start();
+//        new Thread(() -> test.write(Thread.currentThread())).start();
+//
+//        //写与写：结果是同步执行
+//        new Thread(() -> test.write(Thread.currentThread())).start();
+//        new Thread(() -> test.write(Thread.currentThread())).start();
     }
 }
