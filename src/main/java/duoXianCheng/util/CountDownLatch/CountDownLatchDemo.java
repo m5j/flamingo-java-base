@@ -31,6 +31,8 @@ public class CountDownLatchDemo {
             new MyThread().start();
         }
 
+        Thread.sleep(3000);
+
         System.out.println("主线程等待中...");
         countDownLatch.await();
         System.out.println("主线程执行完毕");
