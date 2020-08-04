@@ -6,7 +6,9 @@ package test;
 public class Test {
 
     public static void main(String[] args) {
-        int[] arr = new int[10];
-        System.out.println(arr.length);
+        Person person = new Person();
+        if (person.getProject() == 0L) {
+            System.out.println("进来没");
+        }
     }
 }
