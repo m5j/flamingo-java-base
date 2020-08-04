@@ -6,12 +6,6 @@ import java.net.DatagramSocket;
 
 /**
  * UDP协议接收数据
- * <p>
- * 1.创建接收端Socket对象
- * 2.创建一个数据包（接收容器）
- * 3.调用Socket对象的接收方法接收数据包
- * 4.解析数据包，并显示在控制台
- * 5.释放资源
  * Created by MIN.WU.JUN on 2020/1/7
  */
 public class ReceiveDemo {

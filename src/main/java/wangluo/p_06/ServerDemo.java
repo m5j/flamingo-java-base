@@ -1,7 +1,6 @@
 package wangluo.p_06;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -26,8 +25,10 @@ public class ServerDemo {
         byte[] bytes = new byte[1024];
         int len = inputStream.read(bytes); //阻塞式方法
         String s = new String(bytes, 0, len);
-
         System.out.println("from " + acceptSocket.getInetAddress().getHostAddress() + " : " + s);
+
+        OutputStream outputStream = acceptSocket.getOutputStream();
+        outputStream.write("这是我的回复".getBytes());
 
         //4.释放资源（释放客户端的Socket）
         acceptSocket.close();

@@ -1,4 +1,4 @@
-package duoXianCheng.base;
+package duoXianCheng._1_base;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

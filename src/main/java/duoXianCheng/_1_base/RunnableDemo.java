@@ -1,4 +1,4 @@
-package duoXianCheng.base;
+package duoXianCheng._1_base;
 
 /**
  * 开启线程的第2种方式
