@@ -9,6 +9,8 @@ public class Test {
         Person person = new Person();
         if (person.getProject() == 0L) {
             System.out.println("进来没");
+            System.out.println("进来没");
+            System.out.println("进来没");
         }
     }
 }
