@@ -2,6 +2,7 @@ package suanfa.erfenchazhao;
 
 /**
  * 二分查找
+ * 特点：在一个有序的列表中查找某个元素的位置。二分查找速度较快，时间复杂度为log n
  * Created by minwujun on 2020/8/4
  */
 public class BinarySearchDemo {
