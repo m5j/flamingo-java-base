@@ -18,13 +18,13 @@ public class CallableDemo {
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        FutureTask<String> futureTask = new FutureTask<>(new MyThread());
-        new Thread(futureTask).start();
+        FutureTask<String> futureTask = new FutureTask<>(new MyThread()); //用FutureTask的构造方法将其包起来
+        new Thread(futureTask).start(); //用Thread的构造方法将futureTask包起来，并调用start方法启动
 
         System.out.println("主线程执行业务逻辑");
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
         System.out.println("主线程执行业务逻辑执行完毕，准备利用子线程的返回值");
-        System.out.println("子线程的返回值是：" + futureTask.get());
+        System.out.println("子线程的返回值是：" + futureTask.get()); //futureTask.get()是阻塞的，所以会等待子线程执行完毕，主线程才会继续执行
         System.out.println("主线程执行完毕");
     }
 }
