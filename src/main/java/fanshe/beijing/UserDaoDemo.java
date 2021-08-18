@@ -1,5 +1,8 @@
 package fanshe.beijing;
 
+/**
+ * @author minwujun
+ */
 public class UserDaoDemo {
     public static void main(String[] args) {
         //基本的用户操作

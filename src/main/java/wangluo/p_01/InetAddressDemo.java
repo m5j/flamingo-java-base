@@ -4,7 +4,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * Created by MIN.WU.JUN on 2020/1/7
+ * @author minwujun
  */
 public class InetAddressDemo {
     public static void main(String[] args) throws UnknownHostException {
